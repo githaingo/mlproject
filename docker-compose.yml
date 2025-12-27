@@ -1,0 +1,24 @@
+# version: '3.8'
+
+services:
+  # Pour coder et tester
+  dev:
+    build: .
+    container_name: mlproject-dev
+    volumes:
+      - .:/app                    # Lien direct avec vos fichiers
+    working_dir: /app
+    command: tail -f /dev/null    # Garde le container ouvert
+    user: "1000:1000"  # Utiliser l'UID/GID de devuser
+
+  # Pour Jupyter Notebook
+  jupyter:
+    build: .
+    container_name: mlproject-jupyter
+    ports:
+      - "8888:8888"               # Port pour Jupyter
+    volumes:
+      - .:/app
+    working_dir: /app
+    user: "1000:1000"  # Utiliser l'UID/GID de devuser pour éviter que jupiter utilise root
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root

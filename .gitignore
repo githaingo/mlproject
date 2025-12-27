@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Docker
+.dockerignore
+
+.git
+
+#ssh_security
+.ssh_secure/
