@@ -8,7 +8,9 @@
 ```bash
 # Clone the repository
 git clone https://github.com/votre-username/mon-projet-ml.git
-cd mon-projet-ml
+# Click "Reopen in Container" when prompted
+#Wait for the Dev Container to build
+
 
 # Start with Docker
 docker-compose build

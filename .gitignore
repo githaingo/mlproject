@@ -213,3 +213,21 @@ __marimo__/
 
 #ssh_security
 .ssh_secure/
+
+# ===========================================
+# AJOUTS SPÉCIFIQUES ML 
+# ===========================================
+
+data/
+models/
+*.pth
+*.pt
+*.h5
+*.keras
+*.pkl
+*.joblib
+*.onnx
+*.safetensors
+
+# Dossiers d'expériences ML
+wandb/
